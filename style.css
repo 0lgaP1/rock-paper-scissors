@@ -6,17 +6,31 @@
   box-sizing: border-box;
 }
 
-:root {
-  --very-dark-blue: #47426e;
+ :root {
+  --very-dark-blue: #47426e; 
   --white: #ffffff;
   --yellow: #f1be32;
   --golden-yellow: #feac32;
 }
 
 body {
-  background-color: var(--very-dark-blue);
   text-align: center;
-  color: var(--white);
+  color: black;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://img.freepik.com/premium-vector/topographic-map-background-concept_23-2148577575.jpg?w=826');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.2; /* Прозрачность только для фона */
+  z-index: -1; /* Фон остается позади содержимого */
 }
 
 h1 {
